@@ -1,0 +1,40 @@
+
+#login{
+  box-shadow: 10px 10px 5px #888;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  padding: 5px 5px 5px 65px;
+  width: 400px;
+  border: 1px solid #888;
+  position:relative;
+  margin-left:380px;
+  margin-top:150px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+}
+
+#login h1.shadow{
+  text-shadow: 4px 4px 4px #ccc;
+}  
+
+
+
+#cadastro{
+  box-shadow: 10px 10px 5px #888;
+  -moz-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
+  padding: 5px 5px 5px 65px;
+  width: 400px;
+  border: 1px solid #888;
+  position:relative;
+  margin-left:380px;
+  margin-top:150px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+}
+
+#cadastro h1.shadow{
+  text-shadow: 4px 4px 4px #ccc;
+} 

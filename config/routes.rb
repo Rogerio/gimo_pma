@@ -1,4 +1,11 @@
 Gimo::Application.routes.draw do
+  devise_for :usuarios
+
+  get "page/index"
+  
+  root :to => 'page#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
