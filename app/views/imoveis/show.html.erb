@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @imovel.cliente %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @imovel.endereco %>
+</p>
+
+
+<%= link_to 'Edit', edit_imovel_path(@imovel) %> |
+<%= link_to 'Back', imoveis_path %>

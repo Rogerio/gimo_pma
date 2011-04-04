@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  logradouro: MyString
+  bairro: MyString
+  rua: MyString
+  cidade: MyString
+  estado: MyString
+  cep: MyString
+
+two:
+  logradouro: MyString
+  bairro: MyString
+  rua: MyString
+  cidade: MyString
+  estado: MyString
+  cep: MyString

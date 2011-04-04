@@ -1,3 +1,17 @@
- <%= "Bem vindo: #{current_usuario.username} "%>
-<%= link_to 'sair', :controller => 'devise/sessions', :action => 'destroy' %>   
+<div id="info">   
+	<table> 
+		<tr>
+			<td><img src="/images/Beaker_128x128.png" alt="Beaker 128x128"></td>
+			<td><h1>Em Desenvolvimento</h1></td>
+		</tr>
+	</table>
+    Bem vindo(a): Sr(a)  <%= current_usuario.username %>  
+	<section>
+		Esta funcionalidade ainda não foi implementada, em breve 
+		este recurso estará disponível.<p />
+		Entraremos em contato pelo e-mail : <%= current_usuario.email %>, a fim de mantê-lo informado.
+
+		<%= link_to 'sair', :controller => 'devise/sessions', :action => 'destroy' %>                                          
+	</section> 
+</div>                                       
 

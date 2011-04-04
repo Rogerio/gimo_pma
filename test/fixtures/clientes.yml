@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  data_nascimento: 2011-03-31
+  cpf: MyString
+  usuario: 
+
+two:
+  nome: MyString
+  data_nascimento: 2011-03-31
+  cpf: MyString
+  usuario: 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login::GiMo</title>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :all %>
+	<%= csrf_meta_tag %>
+
+</head>
+<body>   
+	<div id="mask">                               
+		<div id="boxes">
+
+<!-- #personalize sua janela modal aqui -->
+ <section id="registro">   
+<div id="dialog" class="window">
+
+
+<!-- Botão para fechar a janela tem class="close" --> 
+
+Para voltar sem se registrar click em : <%= link_to 'Fechar [X]', new_session_path(resource_name) %></div>
+
+
+
+
+	<h2>Registre-se</h2>
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	<%= devise_error_messages! %>
+	<p><%= f.label 'Usuário' %><br />
+		<%= f.text_field :username, :required => true %></p>
+
+		<p><%= f.label 'E-mail' %><br />
+			<%= f.email_field :email, :required => true %></p>
+
+			<p><%= f.label 'Senha' %><br />
+				<%= f.password_field :password, :required => true %></p>
+
+				<p><%= f.label 'Confirme sua senha' %><br />
+					<%= f.password_field :password_confirmation, :required => true %></p>
+
+					<p><%= submit_tag "Registrar", :class => 'botao3' %></p>
+					<% end %>
+
+				</section>
+			</div>    
+		</div>
+
+		<section id="intro">              
+
+			<%= yield %> 
+
+		</section>        
+
+		<footer>
+
+			<div>       
+
+				<section id                                                                                                   = "about">
+
+					<h3>O que e o GiMo?</h3> 
+
+					GiMo e o seu gestor imobiliário inteligente, foi feito para quem precisa de um sistema para gerência seus imóveis para alugar, controlar seus alugueis, gerar recibos, controlar despesas como IPTU, conta de água e luz.
+
+					<p>Powered by <a href                                                                                     = "https://github.com/cloudhead" target="_blank"><img src="/images/rails.png" alt="Rails" style="width:30px"></a> |  projeto de PMA da Faculdade Anhanguera S/A.
+						<p>Copyright &copy; 2010-2011 Henrique H. da Silva </p>                 
+					</section>
+
+					<section id                                                                                               = "links">
+
+
+					</section>
+				</footer>           
+
+			</body>
+			</html>

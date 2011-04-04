@@ -1,0 +1,25 @@
+<h1>Listing imoveis</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Endereco</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @imoveis.each do |imovel| %>
+  <tr>
+    <td><%= imovel.cliente %></td>
+    <td><%= imovel.endereco %></td>
+    <td><%= link_to 'Show', imovel %></td>
+    <td><%= link_to 'Edit', edit_imovel_path(imovel) %></td>
+    <td><%= link_to 'Destroy', imovel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Imovel', new_imovel_path %>

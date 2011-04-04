@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gimo</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+	<title>Gimo</title>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
 </head>
 <body>
+	<section id="intro">
 
-<%= yield %>
+	</section>        
 
-</body>
-</html>
+	<article>
+		<section id="post">
+			<%= yield %>    		
+		</section>
+	</article>
+
+                                      
+	</body>
+	</html>

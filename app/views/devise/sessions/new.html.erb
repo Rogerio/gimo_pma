@@ -1,21 +1,100 @@
 
+<style>
+#mask {position:absolute;
+z-index:9000;
+background-color:#000;
+display:none;  
 
-<div id = "login">
-    <h2>Login</h2>
+}
+                                         
+.close {
+display:block;
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-<p><%= f.label 'Usuario' %><br />
-<%= f.text_field :username %></p>
+}
+</style>
 
-<p><%= f.label :password %><br />
-	<%= f.password_field :password %></p>
+<script type="text/javascript">
+$(document).ready(function() {
 
-	<% if devise_mapping.rememberable? -%>
-	<p><%= f.check_box :remember_me %> <%= f.label 'Lembrar' %></p>
-	<% end -%>
+//seleciona os elementos a com atributo name="modal"
+$('a[name=modal]').click(function(e) {
+//cancela o comportamento padrão do link
+e.preventDefault();
 
-	<p><%= f.submit "Entrar" %></p>
-	<% end %>
+//armazena o atributo href do link
+var id = $(this).attr('href');
 
-	<%= render :partial => "devise/shared/links" %>
-</div>  
+//armazena a largura e a altura da tela
+var maskHeight = $(document).height();
+var maskWidth = $(window).width();
+
+//Define largura e altura do div#mask iguais ás dimensões da tela
+$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+//efeito de transição
+$('#mask').fadeIn(1000);
+$('#mask').fadeTo("slow",0.8);
+
+//armazena a largura e a altura da janela
+var winH = $(window).height();
+var winW = $(window).width();
+//centraliza na tela a janela popup
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+//efeito de transição
+$(id).fadeIn(2000);
+});
+
+//se o botãoo fechar for clicado
+$('.window .close').click(function (e) {
+//cancela o comportamento padrão do link
+
+});
+
+//se div#mask for clicado
+$('#mask').click(function () {
+
+});
+});
+</script>
+ 
+
+ 	
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>   
+                              
+<section style="margin-top:60px">   
+	   
+	<table>     
+		<tr>                                                 
+			<td><%= f.label 'Usuário' %></td>			
+		</tr>                  
+		<tr>
+			<td><%= f.text_field :username, :required => true %></td>                                           
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td><%= f.label 'Senha' %></td>
+		</tr>  
+		<tr>
+			<td><%= f.password_field :password, :required => true  %></td>
+		</tr>                                		                                                     
+	</table>
+	<table>
+		<tr>                
+			<br />
+			<td><%= submit_tag 'ENTRAR', :class => 'botao3' %></td>                                                  			
+         </tr>
+			<% end %>
+            <a href="#dialog" name="modal"><b>Registre-se</b></a>
+          <%= alert %>  
+ 
+	</table>                                                              
+			<img src="/images/Lock_128x128.png" style="height:100px;width:130px;padding-top:10px;padding-left:200px" alt="Lock Open">      		     
+</section>                        
+			   <a href="https://github.com/henrikesilva/gimo_pma", target="_blank"><img src="/images/forkme.png" style="padding-left:314px;padding-bottom:30px;width:160px;height:110px" alt="Lock Open">   
+	</a>    
+
+
+          
+                               

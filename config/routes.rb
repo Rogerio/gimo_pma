@@ -1,10 +1,18 @@
 Gimo::Application.routes.draw do
+  resources :imoveis
+
+  resources :enderecos
+
   devise_for :usuarios
+  
 
   get "page/index"
   
   root :to => 'page#index'
+  
+  resources :clientes
 
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
